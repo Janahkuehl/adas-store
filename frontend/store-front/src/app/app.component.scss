@@ -1,0 +1,57 @@
+header{
+    background-image: url('../assets/img/background_header.jpg');
+    background-size: cover;
+    padding: 40px 0px;
+    color: aliceblue;
+
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .usuario-informacoes{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        div{
+            margin-left: 16px;
+        }
+
+        img{
+            width: 70px;
+            border-radius: 50%;
+        }
+    }
+}
+
+main{
+
+    div.row{
+        height: 100vh;
+    }
+
+    .menu{
+        background-color: hsl(345, 67%, 96%);
+        
+        div{
+            padding: 8px;
+        }
+
+        div:hover{
+            background-color: hsl(348, 52%, 82%);
+            cursor: pointer;
+        }
+
+        div.item{
+            padding: 8px 8px 8px 24px;
+            font-size: 12px;
+        }
+    }
+}
+
+.borda{
+    border: 1px solid rgb(219, 16, 158);
+}
+
