@@ -1,57 +1,92 @@
-header{
-    background-image: url('../assets/img/background_header.jpg');
+header {
+    background-image: url('../assets/img/teste.jpg');
     background-size: cover;
     padding: 40px 0px;
     color: aliceblue;
 
-    .logo{
+    .logo {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .usuario-informacoes{
+    .usuario-informacoes {
         display: flex;
         justify-content: end;
         align-items: center;
 
-        div{
+        div {
             margin-left: 16px;
         }
 
-        img{
+        img {
             width: 70px;
             border-radius: 50%;
         }
     }
 }
 
-main{
+main {
 
-    div.row{
+    div.row {
         height: 100vh;
     }
 
-    .menu{
-        background-color: hsl(345, 67%, 96%);
-        
-        div{
+    .menu {
+        background-color: #ec4765;
+
+
+        div {
             padding: 8px;
         }
 
-        div:hover{
-            background-color: hsl(348, 52%, 82%);
+        div:hover {
+            background-color: hsl(184, 94%, 51%);
             cursor: pointer;
         }
 
-        div.item{
+        div.item {
             padding: 8px 8px 8px 24px;
             font-size: 12px;
         }
     }
+
+    .modulo {
+
+        .titulo {
+            background-color: #f0f0ef;
+            padding: 16px;
+            border-left: solid 12px #f5696c;
+        }
+
+        .botoes {
+            display: flex;
+            justify-content: end;
+            padding: 12px 0;
+
+            button {
+                border: none;
+                background-color: #f5696c;
+                color: #000000;
+                padding: 8px 24px;
+                margin-left: 8px;
+                border-radius: 4px;
+
+            }
+
+            button:hover{
+                background-color: #db9293;
+            }
+        }
+
+        .tabela {
+            background-color: #f0f0ef;
+            padding: 16px;
+        }
+    }
+
 }
 
-.borda{
+.borda {
     border: 1px solid rgb(219, 16, 158);
 }
-
