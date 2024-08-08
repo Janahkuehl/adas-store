@@ -1,0 +1,33 @@
+.modulo {
+
+    .titulo {
+        background-color: #f0f0ef;
+        padding: 16px;
+        border-left: solid 12px #f5696c;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: end;
+        padding: 12px 0;
+
+        button {
+            border: none;
+            background-color: #f5696c;
+            color: #000000;
+            padding: 8px 24px;
+            margin-left: 8px;
+            border-radius: 4px;
+
+        }
+
+        button:hover{
+            background-color: #db9293;
+        }
+    }
+
+    .tabela {
+        background-color: #f0f0ef;
+        padding: 16px;
+    }
+}
