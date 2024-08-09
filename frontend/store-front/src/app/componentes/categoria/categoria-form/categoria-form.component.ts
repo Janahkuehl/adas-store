@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Categoria } from '../../interfaces/Categoria';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CategoriaService } from '../../servicos/categoria.service';
 
 @Component({
   selector: 'app-categoria-form',
@@ -6,5 +9,42 @@ import { Component } from '@angular/core';
   styleUrl: './categoria-form.component.scss'
 })
 export class CategoriaFormComponent {
+
+  categoria: Categoria = {
+    id: 0,
+    nome: '',
+    status: false
+  };
+
+  isEdicao: boolean = false;
+
+  constructor(
+    private categoriaService: CategoriaService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {
+    const id: number = Number(this.route.snapshot.paramMap.get('id'));
+    if (id && id != 0) {
+        this.isEdicao = true;
+        this.categoriaService.findById(id).subscribe(retorno => {
+          this.categoria = retorno;
+        });
+    }
+  }
+
+  salvar(): void {
+    
+    if (this.isEdicao) {
+      this.categoriaService.update(this.categoria).subscribe(() => {
+        this.router.navigate(['categoria']);
+      });
+    } else {
+      this.categoriaService.add(this.categoria).subscribe(() => {
+        this.router.navigate(['categoria']);
+      });
+    }
+  }
 
 }
