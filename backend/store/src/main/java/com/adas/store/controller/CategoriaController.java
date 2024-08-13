@@ -30,7 +30,7 @@ public class CategoriaController {
         return ResponseEntity.ok(categoriaService.save(categoria));
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<Categoria> update(@RequestBody Categoria categoria) {
         return ResponseEntity.ok(categoriaService.save(categoria));
     }
@@ -38,6 +38,7 @@ public class CategoriaController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Categoria> delete(@PathVariable Integer id) {
         Categoria categoria = categoriaService.findById(id);
+        categoriaService.delete(categoria);
         return ResponseEntity.ok(categoria);
     }
 }

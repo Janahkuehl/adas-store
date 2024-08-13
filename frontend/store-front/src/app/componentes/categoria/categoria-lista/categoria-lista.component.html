@@ -37,9 +37,15 @@
                 Opções
               </button>
               <ul class="dropdown-menu">
-                <li><button class="dropdown-item" type="button">Ver Detalhes</button></li>
-                <li><button class="dropdown-item" type="button">Editar</button></li>
-                <li><button class="dropdown-item" type="button">Excluir</button></li>
+                <li>
+                  <button class="dropdown-item">Ver Detalhes</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" [routerLink]="['/categoria/editar' , categoria.id]">Editar</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" (click)="this.delete(categoria.id)">Excluir</button>
+                </li>
               </ul>
             </div>
           </td>

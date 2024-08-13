@@ -38,11 +38,11 @@ export class CategoriaFormComponent {
     
     if (this.isEdicao) {
       this.categoriaService.update(this.categoria).subscribe(() => {
-        this.router.navigate(['categoria']);
+        this.router.navigate(['categorias']);
       });
     } else {
       this.categoriaService.add(this.categoria).subscribe(() => {
-        this.router.navigate(['categoria']);
+        this.router.navigate(['/categorias']);
       });
     }
   }
